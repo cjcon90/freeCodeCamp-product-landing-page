@@ -1,0 +1,441 @@
+:root {
+    --background: rgba(244, 254, 248, 0.95);
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+
+    background-color: #d3f5e5;
+}
+
+
+/* HEADER & NAV BAR MOBILE STYLING */
+
+header {
+    margin: 0;
+    padding: 0;
+    background-color:  var(--background);
+    text-align: center;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+
+}
+
+.header-img {
+    margin-top: 10px;
+    margin-bottom: -4px;
+    padding: 0;
+    width: 100px;
+}
+
+nav {
+    margin: 0;
+    padding: 0;
+    background: var(--background);
+    width: 100%;
+    position: absolute;
+    text-align: left;
+    list-style: none;
+    top: 100%;
+    left: 0;
+    transform: scale(1, 0);
+    transform-origin: top;
+    transition: transform 400ms ease-in-out;
+}
+
+#nav-list {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.nav-link {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    margin-bottom: .8em;
+    margin-left: .8em;
+}
+
+
+.nav-link a {
+    color: #383558;
+    font-family: 'Permanent Marker', cursive;
+    text-decoration: none;
+    font-size: 1rem;
+    opacity: 0;
+    transition: opacity 100ms ease-in-out;
+}
+
+.nav-link a:hover {
+    color: rgb(255, 120, 23);
+}
+
+.nav-toggle-label span,
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+    display: block;
+    background: #383558;
+    height: 2px;
+    width: 2em;
+    border-radius: 2px;
+    position: relative;
+}
+
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+    content: '';
+    position: absolute;
+}
+
+.nav-toggle-label span::before {
+    bottom: 7px;
+}
+
+.nav-toggle-label span::after {
+    top: 7px;
+}
+
+.nav-toggle {
+    display: none;
+}
+
+.nav-toggle-label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-left: .8em;
+    height: 100%;
+    display: flex;
+    align-items: center;
+
+}
+
+.nav-toggle:checked ~ nav {
+    transform: scale(1,1);
+}
+
+.nav-toggle:checked ~ nav a {
+    opacity: 1;
+}
+
+.nav-toggle:checked ~ nav a:hover {
+    color: rgb(235, 123, 44);
+    transition: opacity 250ms ease-in-out 250ms;
+}
+
+.nav-toggle:checked ~ nav a:active {
+    color: rgb(235, 123, 44);
+    transition: opacity 250ms ease-in-out 250ms;
+}
+
+/* MAIN BODY STYLING - MOBILE */
+
+main {
+    margin: 0 25px 0 25px;
+    padding: 0;
+}
+
+#title {
+    margin: 0;
+    padding: 10px;
+    width: 100%;
+    text-align: center;
+    font-family: 'Sonsie One', cursive;
+    color: #d53c3f;
+    text-shadow: 3px 3px #383558;
+    font-size: 4rem;
+    margin-bottom: 50px;
+}
+
+.about-section {
+    background: var(--background);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    border: dashed 4px #383558;
+    border-radius: 10px;
+    margin: auto;
+    padding: 20px 30px 20px 30px;
+    max-width: 900px;
+}
+
+.subtitle {
+    margin: 0;
+    padding: 0;
+    color: #383558;
+    font-family: 'Permanent Marker', cursive;
+    text-shadow: 1px 1px #9086fd;
+    text-align: center;
+    font-size: 2rem;
+}
+
+.about {
+    font-family: 'Bellota', cursive;
+    text-align: justify;
+    text-align-last: center;
+    color: #383558;
+    text-shadow: .5px .5px #9086fd;
+    font-size: 1rem;
+    line-height: 3em;
+}
+
+#world-span {
+    font-family: 'Sonsie One', cursive;
+    color: #d53c3f;
+    text-shadow: 1px 1px #383558;
+    font-size: 1.2rem;
+    
+}
+
+
+
+
+
+
+/* DESKTOP FORMATTING */
+
+@media screen and (min-width: 800px) {
+    
+    
+    
+    .nav-toggle-label {
+        display: none;
+    }
+
+    header {
+        display: grid;
+        grid-template-columns: 1fr auto minmax(600px, 2fr) 1fr;
+        grid-template-rows: 1fr;
+        padding-top: 10px;
+    }
+
+    .header-img {
+        margin: 0;
+        grid-column: 2 / 3;
+        grid-row: 2/3;
+    }
+
+    nav {
+        all: unset;
+        grid-column: 3 / 4;
+        grid-row: 2/3;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    .nav-link {
+        margin-left: 4em;
+        margin-bottom: 0;
+    }
+
+    nav ul {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .nav-link a {
+        font-size: 1.7em;
+        opacity: 1;
+    }
+
+
+
+    /* DESKTOP MAIN STYLING */
+
+
+    #title {
+        font-size: 6.5rem;
+        margin-top: 40px;
+    }
+
+    .subtitle {
+
+        text-shadow: 1px 1px #9086fd;
+        text-align: center;
+        font-size: 4.5rem;
+    }
+    
+    .about {
+
+        text-shadow: .5px .5px #9086fd;
+        font-size: 2rem;
+        line-height: 3em;
+    }
+    
+    #world-span {
+
+        text-shadow: 1px 1px #383558;
+        font-size: 3rem;
+        
+    }
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* :root {
+    --background: rgba(0, 67, 78, .65);
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url(https://res.cloudinary.com/scrumpylungs/image/upload/v1589120393/freeCodeCamp-product-landing-page/vape-voyage-header_esar40.jpg);
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+    background-position:center top;
+    background-size: 170%;
+}
+
+header {
+    background-color:  var(--background);
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+
+}
+
+.header-img {
+    width: 30%;
+}
+
+nav {
+    margin: 0;
+    padding: 0;
+    background: var(--background);
+    width: 100%;
+    position: absolute;
+    text-align: left;
+    list-style: none;
+    top: 100%;
+    left: 0;
+    display: none;
+}
+
+#nav-list {
+    margin: 0;
+    padding: 0;
+    width: fit-content;
+}
+
+.nav-item {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    margin-bottom: .8em;
+    margin-left: .8em;
+}
+
+#nav-list a {
+    color: black;
+    text-decoration: none;
+    font-size: 1rem;
+    text-transform: uppercase;
+}
+
+#nav-list a: hover {
+
+}
+
+.nav-toggle-label span,
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+    display: block;
+    background: black;
+    height: 2px;
+    width: 2em;
+    border-radius: 2px;
+    position: relative;
+}
+
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+    content: '';
+    position: absolute;
+}
+
+.nav-toggle-label span::before {
+    bottom: 7px;
+}
+
+.nav-toggle-label span::after {
+    top: 7px;
+}
+
+.nav-toggle {
+    display: none;
+}
+
+.nav-toggle-label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-left: .8em;
+    height: 100%;
+    display: flex;
+    align-items: center;
+
+}
+
+.nav-toggle:checked ~ nav {
+    display: block;
+}
+
+}
+
+
+
+@media (max-width: 500) {
+    body {
+
+    }
+
+} */
