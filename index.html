@@ -82,19 +82,18 @@
                     <p id="video-label">Learn more about the benefits of vaping over smoking</p>
                 </div>
                 <video controls width="100%"
-                    src="https://res.cloudinary.com/scrumpylungs/video/upload/v1589228032/freeCodeCamp-product-landing-page/Vaping_StoriesBenefits_of_Vaping_m8slq8.mp4"
-                    type="video/mp4" id="video">Youur browser does not support the video tag</video>
+                    src="https://res.cloudinary.com/scrumpylungs/video/upload/v1589228032/freeCodeCamp-product-landing-page/Vaping_StoriesBenefits_of_Vaping_m8slq8.mp4" id="video">Your browser does not support the video tag</video>
             </div>
             <div class="contact-section" id="contact-section">
                 <h2 class="subtitle" id="contact">Contact Us</h2>
                 <form method="POST" action="https://www.freecodecamp.com/email-submit" class="contact-form" id="form">
                     <label for="name">Name</label>
-                    <input type="text" name="name" id="name" rules="required" placeholder="Please Enter Name">
+                    <input type="text" name="name" id="name" required placeholder="Please Enter Name">
                     <label for="email">E-mail</label>
-                    <input type="email" name="email" id="email" rules="required|email|max:255"
+                    <input type="email" name="email" id="email" required
                         placeholder="Please Enter Email">
                     <label for="message">Message</label>
-                    <textarea name="message" id="message" rows="3" rules="required"
+                    <textarea name="message" id="message" rows="3" required
                         placeholder="What would you like to know?"></textarea>
                     <input type="submit" id="submit" value="Submit"></form>
             </div>
