@@ -424,13 +424,13 @@ footer a:hover {
     .subtitle {
         text-shadow: 1px 1px #9086fd;
         text-align: center;
-        font-size: 4.5rem;
-        padding-top: 40px;
+        font-size: 4rem;
+        padding-top: 30px;
     }
 
     .about {
         text-shadow: .5px .5px #9086fd;
-        font-size: 1.8rem;
+        font-size: 1.6rem;
         line-height: 2em;
     }
 
@@ -524,9 +524,11 @@ footer a:hover {
         grid-template-rows: 100px 750px;
         grid-template-columns: 1fr 1fr;
         grid-gap: 5rem;
-
-
     }
+  
+  footer p {
+    font-size: 1.35rem;
+  }
 
 
 
