@@ -5,13 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/style.css">
-
-
-    <link href="https://fonts.googleapis.com/css2?family=Bellota:wght@700&family=Permanent+Marker&family=Sonsie+One&family=Sriracha&display=swap" rel="stylesheet">
-
-
-
-    <title>Vape Voyage - Homepage</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bellota:wght@700&family=Permanent+Marker&family=Sonsie+One&family=Sriracha&display=swap"
+        rel="stylesheet">
+    <title>Galaxy Vape - Homepage</title>
 </head>
 
 <body>
@@ -19,10 +16,11 @@
         <input type="checkbox" class="nav-toggle" id="nav-toggle">
         <nav id="nav-bar">
             <ul id="nav-list">
-                <li class="nav-link"><a href="# header-img">Home</a></li>
-                <li class="nav-link"><a href="# about-us">About</a></li>
-                <li class="nav-link"><a href="#">Products</a></li>
-                <li class="nav-link"><a href="#">Contact Us</a></li>
+                <li class="nav-item"><a class="nav-link" href="#title">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#about-section">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="#product-section">Products</a></li>
+                <li class="nav-item"><a class="nav-link" href="#video">Learn More</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contact">Contact Us</a></li>
             </ul>
         </nav>
         <label for="nav-toggle" class=nav-toggle-label>
@@ -35,15 +33,73 @@
         <div id="title-div">
             <h1 id="title">Galaxy Vape</h1>
         </div>
-        <section class="about-section">
+        <section class="about-section" id="about-section">
             <h2 class="subtitle" id="about-us">About Us</h2>
             <p class="about">
-                Here at Galaxy Vapes, we believe that vaping is more than just the way to a healthier future.
+                Here at Galaxy Vape, we believe that vaping is more than just the way to a healthier future.
             </p>
-            <p class="about">We pride ourselves on shipping only the best quality products (with free delivery on
-                all orders over €25) so we can quickly get to you clouds and flavours that are <br><span
-                    id="world-span">out of this world</span> </p>
+            <p class="about">We pride ourselves on shipping only the best quality products ~ with free delivery on
+                all orders over €25 ~ so we can quickly get to you clouds and flavours that are <span
+                    id="world-span">out of this world</span></p>
         </section>
+        <h2 class="subtitle" id="products">Our Products</h2>
+        <section class="product-section" id="product-section">
+            <div class="product-div" id="product-liquid">
+                <figure>
+                    <img src="https://res.cloudinary.com/scrumpylungs/image/upload/v1589217017/freeCodeCamp-product-landing-page/liquid_gfrdea.png"
+                        alt="illustrated image of vape liquid" class="product-img" id="liquid-img">
+                    <figcaption>A massive range of e-liquids, flavours and VG/PG ratios to choose from</figcaption>
+                </figure>
+            </div>
+            <div class="product-div" id="product-pen">
+                <figure>
+                    <img src="https://res.cloudinary.com/scrumpylungs/image/upload/v1589219437/freeCodeCamp-product-landing-page/pen-vape_bacidt.png"
+                        alt="illustrated image of vape pen" class="product-img" id="pen-img">
+                    <figcaption>High quality vape pens for beginners, casual use or for vaping on the go</figcaption>
+                </figure>
+            </div>
+            <div class="product-div" id="product-box">
+                <figure>
+                    <img src="https://res.cloudinary.com/scrumpylungs/image/upload/v1589128973/freeCodeCamp-product-landing-page/box-mod_fvcyvj.png"
+                        alt="illustrated image of box mod" class="product-img" id="box-img">
+                    <figcaption>Powerful and customizable box mods for enthusiasts, to achieve maximum clouds and
+                        incredible flavour</figcaption>
+                </figure>
+            </div>
+            <div class="product-div" id="product-misc">
+                <figure>
+                    <img src="https://res.cloudinary.com/scrumpylungs/image/upload/v1589219929/freeCodeCamp-product-landing-page/batteries_ts0yik.png"
+                        alt="illustrated image of batteries" class="product-img" id="misc-img">
+                    <figcaption>Every accessory you could need, to make sure you are never stuck without your galaxy
+                        vape!</figcaption>
+                </figure>
+            </div>
+        </section>
+        <section class="bottom-grid">
+            <div class="video-section" id="video-section">
+                <div class="video-text">
+                    <h2 class="subtitle" id="video-title">Learn More</h2>
+                    <p id="video-label">Learn more about the benefits of vaping over smoking</p>
+                </div>
+                <video controls width="100%"
+                    src="https://res.cloudinary.com/scrumpylungs/video/upload/v1589228032/freeCodeCamp-product-landing-page/Vaping_StoriesBenefits_of_Vaping_m8slq8.mp4"
+                    type="video/mp4" id="video">Youur browser does not support the video tag</video>
+            </div>
+            <div class="contact-section" id="contact-section">
+                <h2 class="subtitle" id="contact">Contact Us</h2>
+                <form method="POST" action="https://www.freecodecamp.com/email-submit" class="contact-form" id="form">
+                    <label for="name">Name</label>
+                    <input type="text" name="name" id="name" rules="required" placeholder="Please Enter Name">
+                    <label for="email">E-mail</label>
+                    <input type="email" name="email" id="email" rules="required|email|max:255"
+                        placeholder="Please Enter Email">
+                    <label for="message">Message</label>
+                    <textarea name="message" id="message" rows="3" rules="required"
+                        placeholder="What would you like to know?"></textarea>
+                    <input type="submit" id="submit" value="Submit"></form>
+            </div>
+        </section>
+
 
     </main>
 
@@ -51,37 +107,3 @@
 </body>
 
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- <header id="header">
-        <img src="https://res.cloudinary.com/scrumpylungs/image/upload/v1589128973/freeCodeCamp-product-landing-page/galaxy-juice-logo_isbdbv.jpg" alt="Vape Voyage Logo" class="header-img">
-        <input type="checkbox" class="nav-toggle" id="nav-toggle">
-        <nav id="nav-bar">
-            <ul id="nav-list">
-                <li class="nav-item"><a href="#">Home</a></li>
-                <li class="nav-item"><a href="#">About</a></li>
-                <li class="nav-item"><a href="#">Products</a></li>
-                <li class="nav-item"><a href="#">Contact</a></li>
-            </ul>
-        </nav>
-        <label for="nav-toggle" class=nav-toggle-label>
-            <span></span>
-        </label>
-    </header>
-
-    <main></main> -->

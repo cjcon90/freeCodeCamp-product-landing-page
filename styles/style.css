@@ -2,11 +2,14 @@
     --background: rgba(244, 254, 248, 0.95);
 }
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
     box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
     margin: 0;
     padding: 0;
 
@@ -19,7 +22,7 @@ html, body {
 header {
     margin: 0;
     padding: 0;
-    background-color:  var(--background);
+    background-color: var(--background);
     text-align: center;
     position: sticky;
     top: 0;
@@ -32,7 +35,7 @@ header {
     margin-top: 10px;
     margin-bottom: -4px;
     padding: 0;
-    width: 100px;
+    width: 85px;
 }
 
 nav {
@@ -56,7 +59,7 @@ nav {
     width: 100%;
 }
 
-.nav-link {
+.nav-item {
     margin: 0;
     padding: 0;
     list-style: none;
@@ -65,7 +68,7 @@ nav {
 }
 
 
-.nav-link a {
+.nav-item a {
     color: #383558;
     font-family: 'Permanent Marker', cursive;
     text-decoration: none;
@@ -74,9 +77,11 @@ nav {
     transition: opacity 100ms ease-in-out;
 }
 
-.nav-link a:hover {
+.nav-item a:hover {
     color: rgb(255, 120, 23);
 }
+
+/* NAV TOGGLE FUNCTIONING */
 
 .nav-toggle-label span,
 .nav-toggle-label span::before,
@@ -118,20 +123,20 @@ nav {
 
 }
 
-.nav-toggle:checked ~ nav {
-    transform: scale(1,1);
+.nav-toggle:checked~nav {
+    transform: scale(1, 1);
 }
 
-.nav-toggle:checked ~ nav a {
+.nav-toggle:checked~nav a {
     opacity: 1;
 }
 
-.nav-toggle:checked ~ nav a:hover {
+.nav-toggle:checked~nav a:hover {
     color: rgb(235, 123, 44);
     transition: opacity 250ms ease-in-out 250ms;
 }
 
-.nav-toggle:checked ~ nav a:active {
+.nav-toggle:checked~nav a:active {
     color: rgb(235, 123, 44);
     transition: opacity 250ms ease-in-out 250ms;
 }
@@ -139,7 +144,7 @@ nav {
 /* MAIN BODY STYLING - MOBILE */
 
 main {
-    margin: 0 25px 0 25px;
+    margin: 0 20px 0 20px;
     padding: 0;
 }
 
@@ -147,6 +152,8 @@ main {
     margin: 0;
     padding: 10px;
     width: 100%;
+    display: flex;
+    justify-content: center;
     text-align: center;
     font-family: 'Sonsie One', cursive;
     color: #d53c3f;
@@ -154,6 +161,7 @@ main {
     font-size: 4rem;
     margin-bottom: 50px;
 }
+
 
 .about-section {
     background: var(--background);
@@ -164,8 +172,9 @@ main {
     border: dashed 4px #383558;
     border-radius: 10px;
     margin: auto;
+    margin-bottom: 50px;
     padding: 20px 30px 20px 30px;
-    max-width: 900px;
+    max-width: 750px;
 }
 
 .subtitle {
@@ -173,9 +182,9 @@ main {
     padding: 0;
     color: #383558;
     font-family: 'Permanent Marker', cursive;
-    text-shadow: 1px 1px #9086fd;
+    text-shadow: 1.5px 1.5px #9086fd;
     text-align: center;
-    font-size: 2rem;
+    font-size: 2.7rem;
 }
 
 .about {
@@ -184,18 +193,148 @@ main {
     text-align-last: center;
     color: #383558;
     text-shadow: .5px .5px #9086fd;
-    font-size: 1rem;
+    font-size: 1.1rem;
     line-height: 3em;
 }
 
 #world-span {
+    display: block;
+    text-align: center;
     font-family: 'Sonsie One', cursive;
     color: #d53c3f;
     text-shadow: 1px 1px #383558;
-    font-size: 1.2rem;
-    
+    font-size: 2rem;
+
 }
 
+.product-section {
+    display: grid;
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas:
+        "liquid"
+        "pen"
+        "box"
+        "misc";
+    align-items: center;
+    align-content: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.product-div {
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.product-img {
+    object-fit: cover;
+    width: 100%;
+    max-height: 100%;
+    border: dashed 2px #383558;
+    border-radius: 50%;
+}
+
+figcaption {
+    font-family: 'Bellota', cursive;
+    text-align: justify;
+    text-align-last: center;
+    margin: auto;
+    color: #383558;
+    text-shadow: .5px .5px #9086fd;
+    font-size: 1.2rem;
+    line-height: 1.5em;
+}
+
+#product-liquid {
+    grid-area: liquid;
+}
+
+#product-pen {
+    grid-area: pen;
+}
+
+#product-box {
+    grid-area: box;
+}
+
+#product-misc {
+    grid-area: misc;
+}
+
+
+.video-section {
+    margin: 5px;
+    padding-bottom: 30px;
+}
+
+#video-label {
+    font-family: 'Bellota', cursive;
+    text-align: center;
+    margin: auto;
+    color: #383558;
+    text-shadow: .5px .5px #9086fd;
+    font-size: 1.2rem;
+    line-height: 1.5em;
+    margin: 20px;
+}
+
+#video {
+    border: solid 2px #383558;
+    border-radius: 10px;
+}
+
+
+.contact-section {
+    margin: 5px;
+}
+
+.contact-form {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    border: dashed 4px #383558;
+    border-radius: 10px;
+    padding: 15px;
+    max-width: 750px;
+}
+
+label {
+    margin-top: 20px;
+    font-family: 'Permanent Marker', cursive;
+    color: #383558;
+    text-transform: uppercase;
+    font-size: 1.5em;
+}
+
+input,
+textarea {
+    font-family: 'Bellota', cursive;
+    color: #383558;
+    text-shadow: .5px .5px #9086fd;
+    font-size: 1.2rem;
+    line-height: 1.5em;
+}
+
+#submit {
+    margin: auto;
+    margin-top: 50px;
+    background-color: #383558;
+    font-family: 'Permanent Marker', cursive;
+    font-size: 2rem;
+    color: rgb(244, 254, 248);
+    border: solid 1px black;
+    text-shadow: 2px 2px black;
+    padding: 10px;
+    width: 50%;
+    border-radius: 10px;
+}
+
+#submit:hover {
+    box-shadow: 2px 2px #383558;
+    background-color: rgb(255, 120, 23);
+
+}
 
 
 
@@ -204,16 +343,16 @@ main {
 /* DESKTOP FORMATTING */
 
 @media screen and (min-width: 800px) {
-    
-    
-    
+
+    /* DESKTOP NAV BAR FORMATTING */
+
     .nav-toggle-label {
         display: none;
     }
 
     header {
         display: grid;
-        grid-template-columns: 1fr auto minmax(600px, 2fr) 1fr;
+        grid-template-columns: .5fr auto minmax(700px, 4fr) .5fr;
         grid-template-rows: 1fr;
         padding-top: 10px;
     }
@@ -233,7 +372,7 @@ main {
         align-items: center;
     }
 
-    .nav-link {
+    .nav-item {
         margin-left: 4em;
         margin-bottom: 0;
     }
@@ -243,7 +382,7 @@ main {
         justify-content: flex-end;
     }
 
-    .nav-link a {
+    .nav-item a {
         font-size: 1.7em;
         opacity: 1;
     }
@@ -259,183 +398,113 @@ main {
     }
 
     .subtitle {
-
         text-shadow: 1px 1px #9086fd;
         text-align: center;
         font-size: 4.5rem;
+        padding-top: 40px;
     }
-    
+
     .about {
-
         text-shadow: .5px .5px #9086fd;
-        font-size: 2rem;
-        line-height: 3em;
+        font-size: 1.8rem;
+        line-height: 2em;
     }
-    
-    #world-span {
 
+    #world-span {
         text-shadow: 1px 1px #383558;
         font-size: 3rem;
-        
-    }
-
-
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* :root {
-    --background: rgba(0, 67, 78, .65);
-}
-
-*, *::before, *::after {
-    box-sizing: border-box;
-}
-
-html, body {
-    margin: 0;
-    padding: 0;
-}
-
-body {
-    background-image: url(https://res.cloudinary.com/scrumpylungs/image/upload/v1589120393/freeCodeCamp-product-landing-page/vape-voyage-header_esar40.jpg);
-    background-repeat:no-repeat;
-    background-attachment:fixed;
-    background-position:center top;
-    background-size: 170%;
-}
-
-header {
-    background-color:  var(--background);
-    text-align: center;
-    position: fixed;
-    width: 100%;
-    z-index: 999;
-
-}
-
-.header-img {
-    width: 30%;
-}
-
-nav {
-    margin: 0;
-    padding: 0;
-    background: var(--background);
-    width: 100%;
-    position: absolute;
-    text-align: left;
-    list-style: none;
-    top: 100%;
-    left: 0;
-    display: none;
-}
-
-#nav-list {
-    margin: 0;
-    padding: 0;
-    width: fit-content;
-}
-
-.nav-item {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    margin-bottom: .8em;
-    margin-left: .8em;
-}
-
-#nav-list a {
-    color: black;
-    text-decoration: none;
-    font-size: 1rem;
-    text-transform: uppercase;
-}
-
-#nav-list a: hover {
-
-}
-
-.nav-toggle-label span,
-.nav-toggle-label span::before,
-.nav-toggle-label span::after {
-    display: block;
-    background: black;
-    height: 2px;
-    width: 2em;
-    border-radius: 2px;
-    position: relative;
-}
-
-.nav-toggle-label span::before,
-.nav-toggle-label span::after {
-    content: '';
-    position: absolute;
-}
-
-.nav-toggle-label span::before {
-    bottom: 7px;
-}
-
-.nav-toggle-label span::after {
-    top: 7px;
-}
-
-.nav-toggle {
-    display: none;
-}
-
-.nav-toggle-label {
-    position: absolute;
-    top: 0;
-    left: 0;
-    margin-left: .8em;
-    height: 100%;
-    display: flex;
-    align-items: center;
-
-}
-
-.nav-toggle:checked ~ nav {
-    display: block;
-}
-
-}
-
-
-
-@media (max-width: 500) {
-    body {
+        margin-top: 20px;
 
     }
 
-} */
+    /* TABLET LANDSCAPE STYLING */
+    
+    .product-section {
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-template-rows: auto auto;
+        grid-template-areas:
+            "liquid pen"
+            "box misc";
+        align-items: center;
+        align-content: center;
+        grid-gap: 5rem;
+        margin: 30px;
+    }
+
+    @media screen and (min-width: 1300px) {
+
+    .product-section {
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        grid-template-rows: auto;
+        grid-template-areas:
+            "liquid pen box misc";
+        align-items: center;
+        align-content: center;
+        grid-gap: 10rem;
+        margin: 30px;
+    }
+
+}
+
+    figcaption {
+        text-align: center;
+        font-size: 1.2rem;
+    }
+
+    #video-label {
+        font-size: 1.5rem;
+    }
+
+    #contact {
+        padding-bottom: 50px;
+    }
+
+    .contact-form {
+        margin: auto;
+        margin-top: 30px;
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        border: dashed 4px #383558;
+        border-radius: 10px;
+        padding: 20px;
+    }
+
+    label {
+        margin-top: 20px;
+        font-size: 1.5em;
+    }
+
+    input,
+    textarea {
+        text-shadow: .5px .5px #9086fd;
+        font-size: 1.2rem;
+        line-height: 1.5em;
+    }
+
+    #submit {
+        margin: auto;
+        margin-top: 50px;
+        font-size: 2rem;
+        border: solid 1px black;
+        text-shadow: 2px 2px black;
+        padding: 10px;
+        width: 50%;
+        border-radius: 10px;
+    }
+
+    .bottom-grid {
+        display: grid;
+        grid-template-rows: 100px 750px;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 5rem;
+
+
+    }
+
+
+
+
+}
