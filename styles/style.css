@@ -334,7 +334,33 @@ textarea {
 
 }
 
+footer {
+    margin: 20px 0 0 0;
+    padding: 5px;
+    background-color: rgba(244, 254, 248, 0.95);
+    border-top: dashed 1px #383558;
+}
 
+footer p {
+    font-family: 'Bellota', cursive;
+    color: #383558;
+    text-shadow: .2px .2px #9086fd;
+    text-align: justify;
+    text-align-last: center;
+}
+
+footer a {
+    text-decoration: none;
+    color: #d53c3f;
+}
+
+footer a:visited {
+    color: #9086fd;
+}
+
+footer a:hover {
+    color: rgb(255, 120, 23);
+}
 
 
 
