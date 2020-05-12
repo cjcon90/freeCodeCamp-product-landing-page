@@ -1,4 +1,6 @@
-:root {--background: rgba(244, 254, 248, 0.95);}
+:root {
+    --background: rgba(244, 254, 248, 0.95);
+}
 
 *,
 *::before,
@@ -362,6 +364,10 @@ footer a:hover {
     color: rgb(255, 120, 23);
 }
 
+.subtitle {
+    padding-top: 110px;
+    margin-top: -100px;
+}
 
 
 /* DESKTOP FORMATTING */
@@ -442,7 +448,7 @@ footer a:hover {
     }
 
     /* TABLET LANDSCAPE STYLING */
-    
+
     .product-section {
         display: grid;
         grid-template-columns: auto auto;
@@ -458,19 +464,19 @@ footer a:hover {
 
     @media screen and (min-width: 1300px) {
 
-    .product-section {
-        display: grid;
-        grid-template-columns: auto auto auto auto;
-        grid-template-rows: auto;
-        grid-template-areas:
-            "liquid pen box misc";
-        align-items: center;
-        align-content: center;
-        grid-gap: 10rem;
-        margin: 30px;
-    }
+        .product-section {
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+            grid-template-rows: auto;
+            grid-template-areas:
+                "liquid pen box misc";
+            align-items: center;
+            align-content: center;
+            grid-gap: 10rem;
+            margin: 30px;
+        }
 
-}
+    }
 
     figcaption {
         text-align: center;
@@ -479,10 +485,6 @@ footer a:hover {
 
     #video-label {
         font-size: 1.5rem;
-    }
-
-    #contact {
-        padding-bottom: 50px;
     }
 
     .contact-form {
@@ -525,11 +527,15 @@ footer a:hover {
         grid-template-columns: 1fr 1fr;
         grid-gap: 5rem;
     }
-  
-  footer p {
-    font-size: 1.35rem;
-  }
 
+    footer p {
+        font-size: 1.35rem;
+    }
+
+    .subtitle {
+        padding-top: 120px;
+        margin-top: -100px;
+    }
 
 
 
